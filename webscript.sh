@@ -8,7 +8,7 @@
 #git repository invite: https://github.com/JohnBonanno/rasberryPi/invitations
 ###############################
 
-output=23
+output=$1
 if [ ! -e "./pg.html" ]; then 	#if no such file
 touch pg.html				#makefile
 chmod a+rw pg.html			#permission
@@ -30,12 +30,12 @@ echo "<br>" >> pg.html
 echo "<input type="submit" value="Submit">" >> pg.html
 echo "</body>" >> pg.html
 echo "</html>" >> pg.html
-fi
+
 chmod a+rw pg.html
 
-if [ -e "./pg.html" ]; then 	#else if file exist
+else
 echo "true"
 output=9,000
-line="<input type="submit" value="${output}">"
+line="<input type="text" name="input"  value="${output}""
 sed -i "13s/.*/${line}/" pg.html 
 fi
