@@ -3,8 +3,8 @@
 ###############################
 #if input.txt DNE
 #makefile
-#put first arguement on first
-#line of input.txt
+#put first arguement in first
+#textbox
 #git repository invite: https://github.com/JohnBonanno/rasberryPi/invitations
 ###############################
 
@@ -34,7 +34,7 @@ echo "</html>" >> pg.html
 chmod a+rw pg.html
 
 else
-echo "true"
+#echo "true"
 output=9,000
 line="<input type="text" name="input"  value="${output}""
 sed -i "13s/.*/${line}/" pg.html 
