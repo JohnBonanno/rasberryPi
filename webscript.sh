@@ -5,6 +5,7 @@
 #makefile
 #put first arguement on first
 #line of input.txt
+#git repository invite: https://github.com/JohnBonanno/rasberryPi/invitations
 ###############################
 
 output=23
