@@ -33,9 +33,9 @@ echo "</html>" >> pg.html
 fi
 chmod a+rw pg.html
 
-#if [ -e "./pg.html" ]; then 	#else if file exist
-
-#output=24
-#line="echo "<input type="submit" value="${output}">" >> pg.html"
-#sed -i "28s/.*/$line/" pg.html	#put 24 in line
-#
+if [ -e "./pg.html" ]; then 	#else if file exist
+echo "true"
+output=9,000
+line="<input type="submit" value="${output}">"
+sed -i "13s/.*/${line}/" pg.html 
+fi
